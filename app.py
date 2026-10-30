@@ -387,11 +387,11 @@ def recommend_engine(book_name, pt, similarity_scores, books):
 @st.cache_resource(show_spinner=False)
 def load_rag_pipeline():
     if get_rag_chain is None:
-        return None, None
-    try:
-        return get_rag_chain()
-    except Exception as e:
-        return None, None
+        raise RuntimeError(
+            f"RAG import failed: {rag_import_error}"
+        )
+
+    return get_rag_chain()
 
 # ==========================================
 # 5. UI COMPONENT GENERATOR
