@@ -8,8 +8,9 @@ import streamlit.components.v1 as components
 # Import RAG retrieval chain
 try:
     from rag_engine import get_rag_chain
-except ImportError:
+except ImportError as e:
     get_rag_chain = None
+    rag_import_error = str(e)
 
 # ==========================================
 # 1. PAGE CONFIGURATION
