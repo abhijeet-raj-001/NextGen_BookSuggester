@@ -1,15 +1,15 @@
-# LangChain Core
-langchain
-langchain-core
-
-# Hugging Face Integration
-langchain-huggingface
-transformers
-huggingface-hub
-
-# Environment Variables
-python-dotenv
-
-# Machine Learning Utilities
+streamlit
+pandas
 numpy
 scikit-learn
+requests
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-huggingface
+chromadb
+sentence-transformers
+transformers
+huggingface-hub
+python-dotenv
