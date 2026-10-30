@@ -325,8 +325,8 @@ def inject_custom_styles():
 # ==========================================
 @st.cache_data(show_spinner=False)
 def load_and_process_data():
-    books = pd.read_csv('Books.csv', low_memory=False)
-    ratings = pd.read_csv('Ratings.csv')
+    books = pd.read_csv('data/Books.csv', low_memory=False)
+    ratings = pd.read_csv('data/Ratings.csv')
     
     # Popularity-based Model
     ratings_with_name = ratings.merge(books, on='ISBN')

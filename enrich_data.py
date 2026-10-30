@@ -23,7 +23,7 @@ def fetch_book_metadata(isbn, title, author):
         pass
     return {"description": "No description available.", "categories": "General", "page_count": "Unknown"}
 
-def build_enriched_dataset(books_path="Books.csv", output_path="enriched_books.csv", sample_limit=500):
+def build_enriched_dataset(books_path="data/Books.csv", output_path="data/enriched_books.csv", sample_limit=500):
     books = pd.read_csv(books_path, low_memory=False).drop_duplicates(subset=["Book-Title"])
     candidates = books.head(sample_limit).copy()
 

@@ -4,7 +4,7 @@ from langchain_core.documents import Document
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 
-def build_vector_store(csv_path="enriched_books.csv", persist_dir="./chroma_books_db"):
+def build_vector_store(csv_path="data/enriched_books.csv", persist_dir="./chroma_books_db"):
     df = pd.read_csv(csv_path).fillna("Unknown")
     documents = []
 
