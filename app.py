@@ -535,7 +535,11 @@ with tab_popular:
 # ==========================================
 # 7. FLOATING AI CONCIERGE WIDGET
 # ==========================================
-rag_chain, retriever = load_rag_pipeline()
+try:
+    rag_chain, retriever = load_rag_pipeline()
+except Exception as e:
+    rag_chain, retriever = None, None
+    st.error(f"RAG initialization failed: {e}")
 
 # Create the popover button (styled as a floating circle via CSS)
 with st.popover("💬"):
